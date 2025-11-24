@@ -1,0 +1,4 @@
+@use "sass:color";
+@use "./setting.scss" as *;
+@forward "./setting.scss";
+@use "../theme.scss" as *;

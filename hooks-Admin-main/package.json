@@ -1,0 +1,96 @@
+{
+  "name": "react-hooks-admin",
+  "private": true,
+  "version": "1.0.0",
+  "author": "SunnyRun",
+  "description": "react-hooks-admin",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:dev": "tsc && vite build --mode development",
+    "build:prod": "tsc && vite build --mode production",
+    "preview": "vite preview",
+    "prepare": "git config core.hooksPath .husky",
+    "lint": "eslint --fix --ext .js,.ts,.tsx ./src",
+    "lint:check": "eslint --ext .js,.ts,.tsx ./src",
+    "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,ts,json,tsx,css,less,scss,html,md}\"",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.0.2",
+    "@reduxjs/toolkit": "^2.8.2",
+    "antd": "^5.27.4",
+    "axios": "^1.10.0",
+    "nprogress": "^0.2.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-redux": "^9.2.0",
+    "react-router-dom": "^7.6.3",
+    "react-transition-group": "^4.4.5",
+    "redux-persist": "^6.0.0",
+    "screenfull": "^6.0.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@types/node": "^24.0.13",
+    "@types/nprogress": "^0.2.3",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^8.37.0",
+    "@typescript-eslint/parser": "^8.37.0",
+    "@vitejs/plugin-react": "^5.0.3",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.31.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.5.1",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "husky": "^9.1.7",
+    "less": "^4.3.0",
+    "lint-staged": "^16.1.2",
+    "postcss": "^8.5.6",
+    "prettier": "^3.6.2",
+    "terser": "^5.43.1",
+    "typescript": "^5.8.3",
+    "vite": "^7.1.7",
+    "vite-plugin-eslint2": "^5.0.4",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "rimraf": "^6.0.1",
+    "rollup-plugin-visualizer": "^5.12.0",
+    "vite-plugin-compression": "^0.5.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{scss,less,css,html}": [
+      "prettier --write"
+    ],
+    "package.json": [
+      "prettier --write"
+    ],
+    "{!(package)*.json,.!(browserslist)*rc}": [
+      "prettier --write --parser json"
+    ]
+  },
+  "eslintIgnore": [
+    "*.sh",
+    "node_modules",
+    "*.md",
+    "*.woff",
+    "*.ttf",
+    ".vscode",
+    ".idea",
+    "dist",
+    "/public",
+    "/docs",
+    ".husky",
+    ".local",
+    "/bin",
+    ".eslintrc.js",
+    ".prettierrc.js",
+    "/src/mock"
+  ]
+}
